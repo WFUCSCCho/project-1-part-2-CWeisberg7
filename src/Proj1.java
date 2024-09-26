@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+/**
+ * Run in terminal "java Proj1 input.txt"
+ */
 public class Proj1 {
     public static void main(String[] args) throws IOException {
         if (args.length != 1) {

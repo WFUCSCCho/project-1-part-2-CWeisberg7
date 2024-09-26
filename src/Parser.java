@@ -21,7 +21,7 @@ public class Parser {
         Scanner inputFileNameScanner = null;
 
         // Open the input file
-        inputFileNameStream = new FileInputStream("USA_cars_datasets.csv");
+        inputFileNameStream = new FileInputStream("/Users/cweisberg/Desktop/project-1-part-2-CWeisberg7/src/USA_cars_datasets.csv");
         inputFileNameScanner = new Scanner(inputFileNameStream); //
 
         // ignore first line
