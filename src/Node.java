@@ -4,7 +4,7 @@
  * an element, references to both left and right subtrees, and their
  * accompanying get/set methods.
  * @author: Charles Weisberg
- * @date: 22 September 2024
+ * @date: 26 September 2024
  *********************************************/
 class Node<T extends Comparable<T>> {
     private T element; // the value stored in the node
