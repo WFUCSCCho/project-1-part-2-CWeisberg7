@@ -3,7 +3,7 @@
  * @description: Manages the structure of binary search trees (BST)
  * supports operations such as insertion, removal, and iteration without needing to understand the type of its elements
  * @author: Charles Weisberg
- * @date: 22 September 2024
+ * @date: 26 September 2024
  *********************************************/
 
 import java.util.Iterator;
@@ -51,6 +51,7 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
 
     /**
      * Helper method to recursively insert a new element
+     * Added >= to allow for duplicate cars with the same price to be added to BST
      *
      * @param root the current node being looked at
      * @param e    the element to be inserted

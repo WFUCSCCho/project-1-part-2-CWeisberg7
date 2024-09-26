@@ -1,3 +1,12 @@
+/*********************************************
+ * @file: Parser.java
+ * @description: Parses input commands defined by the user to operate on a
+ * BST. It processes commands from
+ * an input file and updates an output file based on operations performed.
+ * @author: Charles Weisberg
+ * @date: 26 September 2024
+ *********************************************/
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -6,13 +15,24 @@ public class Parser {
     // Create a BST tree of your class type (Note: Replace "Object" with your class type)
     private BST<CARData> mybst = new BST<>();
 
-
+    /**
+     * Constructor that precess commands form the specified file.
+     *
+     * @param filename the name of the input file
+     * @throws IOException if the file is not found
+     */
     public Parser(String filename) throws IOException {
         process(new File(filename));
     }
 
-    // Implement the process method
-    // Remove redundant spaces for each input command
+    /**
+     * Processes each line of the input file, removing redundant spaces
+     * and executing commands.
+     * Also reads each line form the csv file and fills a BST with each CARData node
+     *
+     * @param input the input file
+     * @throws FileNotFoundException if the file is not found
+     */
     public void process(File input) throws IOException {
 
         // For file input
@@ -75,13 +95,11 @@ public class Parser {
      */
     public void operate_BST(String[] command) {
         switch (command[0]) {
-            // add your cases here
-
             case "removeprice" -> {
                 if (command.length == 2) {
                     try {
                         int price = Integer.parseInt(command[1]);
-                        int flip = 0;
+                        int flip = 0; // added so that it wont print remove failed each iteration only at the end
                         for (CARData car : mybst) {
 
                             if (car.getPrice() == price) {
@@ -111,7 +129,7 @@ public class Parser {
                 if (command.length == 2) {
                     try {
                         String brand = (command[1]);
-                        int flip = 0;
+                        int flip = 0; // added to doesnt print search failed each iteration but once at the end if nothing is found
                         for (CARData car : mybst) {
 
                             if (car.getBrand().equals(brand)) {
@@ -145,8 +163,12 @@ public class Parser {
         }
     }
 
-    // Implement the writeToFile method
-    // Generate the result file
+    /**
+     * Writes the specified content to the result file
+     *
+     * @param content  the content to write
+     * @param filePath the path to the output file
+     */
     public void writeToFile(String content, String filePath) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             writer.write(content);

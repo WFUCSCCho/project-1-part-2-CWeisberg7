@@ -1,12 +1,8 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
 
 /**
  * Run in terminal "java Proj1 input.txt"
+ * CSV file got rid of the columns condition as it wasn't fully complete for all cars
  */
 public class Proj1 {
     public static void main(String[] args) throws IOException {
@@ -15,7 +11,7 @@ public class Proj1 {
             System.exit(0);
         }
 
-       new Parser(args[0]);
+        new Parser(args[0]);
     }
 }
 
