@@ -1,25 +1,9 @@
+removeprice    0
+removeprice         500
+removeprice  100000000
 
-insert 111
-             insert 23
+remove hahaahah
 
-insert 99
-insert         4
+searchbrand ford
+searchbrand ferrari
 
-isEmpty
-
-    insert     111
-
-print
-
-
-search 9
-
-remove 23
-
-remove 4
-remove 999999
-isEmptyasfh
-print
-
-insert 123
-print
